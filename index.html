@@ -5,10 +5,221 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page YAI</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    
 </head>
 <body>
+    <header id="Home">
+        <nav>
+            <div class="logo">Bamboo Crafts</div>
+            <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
+        <ul class="navbar" id="navbar">
+                <li class="nav-item"><a href="#Home">Home</a></li>
+                <li class="nav-item"><a href="#About" >About</a></li>
+                <li class="nav-item"><a href="#Service">Services</a></li>
+                <li class="nav-item"><a href="#Product">Products</a></li>
+                <li class="nav-item"><a href="#Contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="overlay">
+            <div class="socials">
+               <i class="fab fa-facebook"> <a href="#"></a></i>
+                <i class="fab fa-twitter"><a href="#"></a></i>
+                <i class="fab fa-instagram"><a href="#"></a></i>
+                <i class="fas fa-envelope"><a href="#"></a></i>
+            </div>
+
+            <div class="delivery">
+                <p>Delivery available nationwide</p>
+            </div>
+
+            <div class="contact">
+                <i class="fas fa-phone"><a href="#">+123456789</a></i>
+                <i class="fas fa-map-marker-alt"><a href="#">Abura-Asebu-Kwamankese Central Region-Ghana</a></i>
+            </div>
+
+        </div>
+        
+        <div class="hero">
+            <div class="hero-image">
+                <img src="../asset/image/b11.jpg" id="container1" class="active">
+                <img src="../asset/image/b19.jpg" id="container2">
+                <img src="../asset/image/b3.jpg" id="container3">   
+                <img src="../asset/image/b2.jpg" id="container4"> 
+            </div>
+    
+            <button id="prev" onclick="prev()">&lt;</button>
+            <button id="next" onclick="next()">&gt;</button>
+    
+            <div class="hero-content">
+            <h1>Welcome to YAI</h1>
+            <p>Bamboo crafted eco-friendly and sustainable products to support a greener lifestyle.</p>
+            <button><a href="http://" target="_blank">Shop now</a></button>
+        </div>
+    </div>
+
+    </header>
+
+    <section id="About" class="about">
+
+        <div class="content">
+            <div class="image">
+                 <img src="../asset/image/b24.jpg" alt="image">
+            </div>
+
+            <div class="text">
+                <h1><a href="" class="typewrite" data-period="2000" data-type='[ "About Us" ]'>
+                    <span class="wrap"></span>
+                </a></h1>
+                <p class="quote">
+                    Bamboo is a natural material that is used in many different products. It is a renewable resource that is easy to find and can be grown in many different places. Bamboo is also a strong and flexible material that is used in many different products. It is a renewable resource that is easy to find and can be grown in many different places.
+                </p>
+            </div>
+        </div>
+
+        <div class="content">
+
+            <div class="text">
+                <h1><a href="" class="typewrite" data-period="2000" data-type='[ "Meet the Founder" ]'>
+                    <span class="wrap"></span>
+                </a></h1>
+                <p class="quote">
+                    Gideon  Abban, an innovative entrepreneur from Abura-Asebu-Kwamankese, is dedicated to sustainability through eco-friendly craftsmanship. Using bamboo, he creates durable and stylish household items, blending traditional techniques with modern design. With a vision for growth, he seeks mentorship and support to expand his impact and promote sustainable living.
+                </p>
+            </div>
+
+            <div class="image">
+                <img src="../asset/image/i4.jpeg" alt="image">
+           </div>
+        </div>
+
+
+    </section>
+
+    <!-- Services Section -->
+     <section class="service" id="Service">
+
+        <div class="content">
+
+            <div class="image">
+                <img src="../asset/image/b14.avif" alt="image">
+           </div>
+
+            <div class="text">
+                <h1><a href="" class="typewrite" data-period="2000" data-type='[ "Our Service" ]'>
+                    <span class="wrap"></span>
+                </a></h1>
+                <p class="quote">
+                    At Bamboo Crafts, we specialize in sustainable, eco-friendly bamboo products. As a strong, flexible, and renewable resource, bamboo grows quickly with minimal environmental impact. Our responsibly sourced bamboo ensures durability and sustainability, offering a greener alternative for everyday use.  
+                </p>
+            </div>
+
+        </div>
+
+     </section>
+
+    <!-- Contact Section -->
+    <section class="main-contact" id="Contact">
+        <h1><a href="" class="typewrite" data-period="2000" data-type='[ "Contact Us" ]'>
+        <span class="wrap"></span>
+    </a></h1>
+
+        <div class="contact-container">
+
+        <div class="form">
+            
+            <form action="https://formspree.io/f/xqkwvqpw" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea><br>
+
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+   
+    <!-- Map Section -->
+<div class="map-section">
+    <h2>Find Us Here</h2>
+    <div class="map-container">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31717.661322060415!2d-1.3166933393317608!3d5.208096029676769!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfddf1aee7a639b7%3A0x2ff6481c54d0f3b3!2sAbura-Asebu-Kwamankese%20District!5e0!3m2!1sen!2sgh!4v1708367000000" 
+            width="100%" 
+            height="100" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+
+</div>
+
+</section>
+
+
+
+    <footer>
+            
+        <div class="footer-content">
+            <div class="socials">
+                <p>Follow us on social media:</p>
+               <i class="fab fa-facebook"> <a href="#"></a></i>
+                <i class="fab fa-twitter"><a href="#"></a></i>
+                <i class="fab fa-instagram"><a href="#"></a></i>
+            </div>
+
+            <div class="delivery">
+                <button><a href="http://" target="_blank">Shop now</a></button>
+                <p>Delivery available nationwide</p>
+            </div>
+
+            <div class="footer-contact">
+                <i class="fas fa-map-marker-alt"><a href="#">Abura-Asebu-Kwamankese Central Region-Ghana</a></i>
+                <i class="fas fa-phone"><a href="#">+123456789</a></i>
+                <i class="fas fa-envelope"><a href="#"></a></i>
+                
+            </div>
+        </div>
+
+
+        <div class="p-center p-l-15 p-r-15">
+			<a href="#">
+				<img class="h-size2" src="asset/image/icons/paypal.png" alt="IMG-PAYPAL">
+			</a>
+
+			<a href="#">
+				<img class="h-size2" src="asset/image/icons/visa.jpeg" alt="IMG-VISA">
+			</a>
+
+			<a href="#">
+				<img class="h-size2" src="asset/image/icons/master.png" alt="IMG-MASTERCARD">
+			</a>
+
+			<a href="#">
+				<img class="h-size2" src="asset/image/icons/express.png" alt="IMG-EXPRESS">
+			</a>
+
+			<a href="#">
+				<img class="h-size2" src="asset/image/icons/mtn.png" alt="IMG-DISCOVER">
+			</a>
+            <a href="#">
+				<img class="h-size2" src="asset/image/icons/at money.png" alt="IMG-MASTERCARD">
+			</a>
+
+			<a href="#">
+				<img class="h-size2" src="asset/image/icons/voda.png" alt="IMG-EXPRESS">
+			</a>
+		</div>
+
+        <h5>Copyright &copy; 2025 Bamboo Crafts. All rights reserved.</h5>
+    </footer>
     
 
-    <script></script>
+    <script src="script.js"></script>
 </body>
 </html>
