@@ -635,8 +635,8 @@ footer {
     }
 
     .overlay {
-        flex-direction: column;
         text-align: center;
+        display: none;
     }
 
     .contact {
@@ -647,17 +647,23 @@ footer {
 
 /* Responsive Hero Section */
 @media (max-width: 768px) {
+    .hero-image{
+        object-fit: cover;
+    }
+
     .hero-content h1 {
-        font-size: 2rem;
+        font-size: 40px;
+        width: 100%;
+        height: auto;
     }
 
     .hero-content p {
-        font-size: 1rem;
+        font-size: 15px;
     }
 
     .hero-content button {
-        font-size: 0.9rem;
-        padding: 8px 16px;
+        font-size: 10px;
+        padding: 10px 20px;
     }
 }
 
@@ -700,9 +706,18 @@ footer {
 
 /* Responsive Footer */
 @media (max-width: 768px) {
+    footer{
+        margin-top: 100%;
+        text-align: center;
+        line-height: 0;
+        
+    }
     .footer-content {
         flex-direction: column;
         text-align: center;
+        font-size: 5px;
+        line-height: 0;
+        margin-top: 0;
     }
 
     .footer-contact,
@@ -713,6 +728,13 @@ footer {
     }
 
     .p-center {
-        flex-direction: column;
+        flex-direction: row;
     }
+
+    .p-center img {
+        width: 20px;
+        height: 15px;
+    }
+
+    
 }
