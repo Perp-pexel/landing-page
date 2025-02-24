@@ -96,3 +96,39 @@ showSlide(currentIndex);
 // });
 
 
+document.addEventListener("DOMContentLoaded", function () {
+    const images = document.querySelectorAll(".products-image img");
+
+    images.forEach((img, index) => {
+        // Create wrapper div for the image
+        let wrapper = document.createElement("div");
+        wrapper.classList.add("product-wrapper");
+
+        // Create button container
+        let buttonContainer = document.createElement("div");
+        buttonContainer.classList.add("button-container");
+
+        // Buy Now button
+        let buyButton = document.createElement("button");
+        buyButton.classList.add("buy-btn");
+        buyButton.innerText = "Buy Now";
+
+        // Like button
+        let likeButton = document.createElement("button");
+        likeButton.classList.add("like-btn");
+        likeButton.innerHTML = "🤍"; // Default empty heart
+
+        likeButton.addEventListener("click", function () {
+            likeButton.innerHTML = likeButton.innerHTML === "🤍" ? "❤️" : "🤍";
+        });
+
+        // Append buttons to container
+        buttonContainer.appendChild(buyButton);
+        buttonContainer.appendChild(likeButton);
+
+        // Wrap the image inside the wrapper and append buttons
+        img.parentNode.insertBefore(wrapper, img);
+        wrapper.appendChild(img);
+        wrapper.appendChild(buttonContainer);
+    });
+});
