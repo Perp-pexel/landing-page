@@ -894,7 +894,7 @@ footer {
 /* Responsive Footer */
 @media (max-width: 768px) {
     footer{
-        margin-top: 100%;
+        margin-top: 150%;
         text-align: center;   
     }
 
@@ -916,6 +916,7 @@ footer {
         flex-direction: row;
         padding-bottom: 10px;
         list-style: center;
+        text-align: center;
     }
 
     .p-center img {
@@ -926,6 +927,7 @@ footer {
     h5{
         font-size: 12px;
         margin: 0;
+        text-align: center;
     }
     
 }
