@@ -760,6 +760,12 @@ footer {
     height: 17px;
 }
 
+h5 {
+    margin-bottom: 2%;
+    margin-top: 5px;
+    padding-right: 70px;
+}
+
 /* Responsive Styles */
 
 /* Mobile Navigation */
@@ -926,8 +932,8 @@ footer {
 
     h5{
         font-size: 12px;
-        margin: 0;
-        text-align: center;
+        /* margin: 0;
+        text-align: center; */
     }
     
 }
