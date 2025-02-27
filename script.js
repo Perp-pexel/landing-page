@@ -11,26 +11,24 @@ function toggleLogo() {
     }
 }
 
-
-// Close overlay when clicking outside the image
+// Close overlay when clicking outside the image or the close button
 function closeOverlay(event) {
     const overlay = document.getElementById("logo-overlay");
     const enlargedImage = document.getElementById("enlarged-logo");
     const closeButton = document.querySelector(".close-btn");
 
-     // Check if the click is on the overlay or close button (not the image)
-     if (event.target === overlay || event.target === closeButton) {
-        "none";
+    // Check if the click is outside the image or on the close button
+    if (event.target === overlay || event.target === closeButton) {
+        overlay.classList.add("hidden");
+        overlay.style.display = "none"; // Hide overlay
     }
 }
 
+// Attach event listener to the overlay for closing
+document.getElementById("logo-overlay").addEventListener("click", closeOverlay);
 
-// Function for the close button
-function closeLogo(event) {
-    event.stopPropagation(); // Prevent click from bubbling to overlay
-    toggleLogo();
-}
 
+// humburger
 document.addEventListener("DOMContentLoaded", function () {
     const hamburger = document.querySelector(".hamburger");
     const navLinks = document.getElementById("navbar");

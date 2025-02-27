@@ -6,14 +6,15 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     background-color: rgba(0, 128, 28, 0.075);
 }
 
 /* Navbar Styling */
 .navbar {
     display: flex;
     align-items: center;
-    padding: 10px 20px;
+    padding: 8px;
     background: #222;
     color: white;
 }
@@ -24,10 +25,10 @@ body {
 }
 
 .logo img {
-    width: 80px;
+    width: 100px;
     height: auto;
     object-fit: contain;
-    max-height: 50px;
+    max-height: 40px;
     transition: transform 0.3s ease-in-out;
 }
 
@@ -86,7 +87,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     background-color: #333;
-    padding: 7px;
+    padding: 1px;
     position: fixed;
     top: 0;
     left: 0;
@@ -134,9 +135,8 @@ nav {
     align-items: center;
     color: #fff;
     z-index: 1;
-    margin-top: 70px;
+    margin-top: 55px;
     margin-bottom: 0.4px;
-    padding: 5px;
 }
 
 i {
@@ -154,6 +154,14 @@ i:hover {
 .socials {
     margin-left: 10px; 
 }  
+
+.socials a {
+    margin-right: 10px; 
+    text-decoration: none;
+    color: white;
+    transition: 0.3s ease-in-out;
+    font-weight: bold;
+}
 
 .delivery {
     margin-right: 10px; 
@@ -178,6 +186,10 @@ i:hover {
     margin-left: 5px;
 }
 
+.contact a:hover {
+    color: green;
+}
+
 
 /* slider */
 .hero {
@@ -193,7 +205,7 @@ i:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.342), rgba(0, 0, 0, 0.336));
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.219), rgba(0, 0, 0, 0.336));
     z-index: 1;
 }
 
@@ -214,8 +226,8 @@ i:hover {
 
 #prev,
 #next{
-    height: 40px;
-    width: 40px;
+    height: 20px;
+    width: 20px;
     position: absolute;
     background-color: white;
     color: black;
@@ -231,7 +243,7 @@ i:hover {
 
 #prev:hover,
 #next:hover{
-    background-color: #575757;
+    background-color: green;
     color: white;
 }
 
@@ -276,6 +288,27 @@ i:hover {
         opacity: 1;
     }
 }
+@keyframes slideLeft {
+    from {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideRight {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
 
 @keyframes scaleUp {
     from {
@@ -315,13 +348,24 @@ i:hover {
 }
 
 .hero-content h1 {
-    font-size: 50px;
+    font-size: 40px;
     margin-bottom: 10px;
     opacity: 0;
 }
 
 .hero-content.animate h1 {
     animation: slideUp 1.5s ease-out forwards;
+    animation-delay: 0.3s;
+}
+
+.hero-content h2 {
+    font-size: 50px;
+    margin-bottom: 10px;
+    opacity: 0;
+}
+
+.hero-content.animate h2 {
+    animation: scaleUp 1.5s ease-out forwards;
     animation-delay: 0.3s;
 }
 
@@ -370,7 +414,7 @@ i:hover {
 /* About */
 
 .about{
-    margin: 5%;
+    padding: 30px;
 }  
 
  h1 {
@@ -386,7 +430,7 @@ i:hover {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    background-color: #f5f5f5;
+    background-color: rgba(0, 128, 28, 0.075);
     margin: 20px;
     margin-left: 5%;
     margin-right: 5%;
@@ -405,7 +449,7 @@ i:hover {
 }
 
 .text{
-    width: 80%;
+    width: 100%;
     text-align: center;
     animation: slideDown 1.5s ease-out forwards;
     animation-delay: 0.5s;
@@ -413,8 +457,8 @@ i:hover {
 }
 
 .text p{
-    font-size: 18px;
-    font-style: italic;
+    font-size: 16px;
+    /* font-style: italic; */
     line-height: 1.5;
     margin-bottom: 10px;
     animation:  1.5s ease-out forwards;
@@ -427,7 +471,7 @@ i:hover {
 .quote::before,
 .quote::after {
     content: '“'; 
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: green;
     font-weight: bold;
     position:sticky;
@@ -438,17 +482,66 @@ i:hover {
     right: 10px;
 }
 
+.statement{
+    display: flex;
+    flex-direction: row;
+    font-size: 15px;
+    line-height: 1.5;
+    gap: 10px;  
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 20px;
+}
+
+.statement-item{
+    /* border-right: rgba(0, 128, 0, 0.685) solid 2px;  */
+    box-shadow: rgba(0, 128, 0, 0.829) 1px 1px 1px 1px;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    animation: slideRight 1.5s ease-out forwards;
+    animation-delay: 0.1s;
+}
+
+.statement h3{
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-left: 10%;
+    margin-right: 10%;
+    position: relative;
+}
+
+
+.statement p{
+    text-align: start;
+    font-size: 12px;
+    line-height: 1.5;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin: 15px;
+    animation: scaleUp 1.5s ease-out forwards;
+    animation-delay: 0.5s;
+    position: relative;
+}
+
 .collection{
-    margin: 5%;
+    margin: 10%;
     margin-top: 5%;
+    margin-bottom: 5%;
     animation: slideLeft 1.5s ease-out forwards;
     animation-delay: 0.1s; 
 }
 
+.collection a{
+    font-size: 10px;
+}
+
 p{
     text-align: center;
-    font-size: 18px;
-    margin-top: 5px;
+    font-size: 15px;
+    margin: 5px;
+    margin-bottom: 10px;
 }
 
 .collection-image{
@@ -486,23 +579,12 @@ p{
 }
 
 .collection-item img{
-    width: 100%;
-    height: 70%;
+    width: 80%;
+    height: 60%;
     object-fit: cover;
     border-radius: 50%;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin: 15px;
-}
-
-@keyframes slideLeft {
-    from {
-        transform: translateX(80px);
-        opacity: 0;
-    }
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
 }
 
 
@@ -771,6 +853,10 @@ footer {
     
 }
 
+.footer-contact a:hover {    
+    color: green;
+}
+
 .delivery {
     margin-left: 80px;
     display: flex;
@@ -886,13 +972,17 @@ h5 {
     }
 
     .hero-content h1 {
-        font-size: 40px;
+        font-size: 20px;
         width: 100%;
         height: auto;
     }
 
+    .hero-content h2 {
+        font-size: 28px;
+    }
+
     .hero-content p {
-        font-size: 15px;
+        font-size: 13px;
     }
 
     .hero-content button {
@@ -903,14 +993,27 @@ h5 {
 
 /* Responsive About Section */
 @media (max-width: 768px) {
+
     .content {
         flex-direction: column;
         align-items: center;
+        margin-top: 20px;
     }
 
     .text {
         width: 100%;
         text-align: center;
+    }
+
+    .statement {
+        width: 90%;
+        text-align: center;
+        display: block;
+        padding-right: 20px;
+    }
+    .statement-item {
+        margin-bottom: 10px;
+        border: none;
     }
 }
 
