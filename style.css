@@ -957,28 +957,24 @@ h5 {
     .overlay{
         display: none;
     }
-}
 
-@media (max-width: 768px) {
     .logo img {
         width: 60px;
         max-height: 40px;
     }
-}
-/* Responsive Hero Section */
-@media (max-width: 768px) {
+
     .hero-image{
         object-fit: cover;
     }
 
     .hero-content h1 {
-        font-size: 20px;
+        font-size: 25px;
         width: 100%;
         height: auto;
     }
 
     .hero-content h2 {
-        font-size: 28px;
+        font-size: 30px;
     }
 
     .hero-content p {
@@ -989,10 +985,6 @@ h5 {
         font-size: 10px;
         padding: 10px 20px;
     }
-}
-
-/* Responsive About Section */
-@media (max-width: 768px) {
 
     .content {
         flex-direction: column;
@@ -1001,7 +993,7 @@ h5 {
     }
 
     .text {
-        width: 100%;
+        width: 95%;
         text-align: center;
     }
 
@@ -1015,10 +1007,7 @@ h5 {
         margin-bottom: 10px;
         border: none;
     }
-}
 
-/* Responsive Collection Section */
-@media (max-width: 768px) {
     .collection {
         flex-direction: column;
         align-items: center;
@@ -1041,10 +1030,7 @@ h5 {
         height: 50%;
         object-fit: cover;
     }
-}
 
-/* Rsponsive Products Section */
-@media (max-width: 768px) {
     .products-image {
         flex-direction: column;
         align-items: center;
@@ -1052,17 +1038,10 @@ h5 {
         margin-top: 5%;
     }
     
-}
-
-/* Responsive Services Section */
-@media (max-width: 768px) {
     .service {
         margin: 5%;
     }
-}
 
-/* Responsive Contact Section */
-@media (max-width: 768px) {
     .contact-container {
         flex-direction: column;
         width: 100%;
@@ -1078,10 +1057,7 @@ h5 {
         width: 100%;
         margin: 0;
     }
-}
 
-/* Responsive Footer */
-@media (max-width: 768px) {
     footer{
         margin-top: 110%;
         text-align: center;   
@@ -1120,4 +1096,69 @@ h5 {
         width: 100%;
     }
     
+}
+
+
+@media (max-width: 480px) {
+    /* Navbar adjustments */
+    nav {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 5px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar a {
+        display: block;
+        padding: 10px;
+    }
+
+    /* Logo adjustments */
+    .logo img {
+        width: 80px;
+        max-height: 30px;
+    }
+
+    /* Hero section adjustments */
+    .hero {
+        height: 80vh;
+    }
+
+    .hero img {
+        object-fit: cover;
+    }
+
+    /* About section */
+    .about {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    /* Footer */
+    footer {
+        padding: 15px;
+        font-size: 14px;
+    }
+
+    /* Product Grid Adjustments */
+    .products-image {
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    /* Button Adjustments */
+    .buy-btn {
+        font-size: 0.55rem;
+        padding: 8px 6px;
+    }
+
+    .like-btn {
+        font-size: 1rem;
+    }
 }
