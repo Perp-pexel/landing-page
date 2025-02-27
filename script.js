@@ -1,8 +1,56 @@
-// humburger
-function toggleMenu() {
-    const navbar = document.getElementById('navbar');
-    navbar.classList.toggle('active');
+function toggleLogo() {
+    const overlay = document.getElementById("logo-overlay");
+
+    // Toggle visibility
+    if (overlay.classList.contains("hidden")) {
+        overlay.classList.remove("hidden");
+        overlay.style.display = "flex"; // Show overlay
+    } else {
+        overlay.classList.add("hidden");
+        overlay.style.display = "none"; // Hide overlay
+    }
 }
+
+
+// Close overlay when clicking outside the image
+function closeOverlay(event) {
+    const overlay = document.getElementById("logo-overlay");
+    const enlargedImage = document.getElementById("enlarged-logo");
+    const closeButton = document.querySelector(".close-btn");
+
+     // Check if the click is on the overlay or close button (not the image)
+     if (event.target === overlay || event.target === closeButton) {
+        "none";
+    }
+}
+
+
+// Function for the close button
+function closeLogo(event) {
+    event.stopPropagation(); // Prevent click from bubbling to overlay
+    toggleLogo();
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    const hamburger = document.querySelector(".hamburger");
+    const navLinks = document.getElementById("navbar");
+    const links = document.querySelectorAll(".nav-item a");
+
+    // Toggle menu
+    function toggleMenu() {
+        navLinks.classList.toggle("active");
+    }
+
+    hamburger.addEventListener("click", toggleMenu);
+
+    // Close menu on link click
+    links.forEach(link => {
+        link.addEventListener("click", function () {
+            navLinks.classList.remove("active");
+        });
+    });
+});
+
 
 // Slider
 let slides = document.querySelectorAll(".hero img");

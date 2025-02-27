@@ -11,22 +11,31 @@
 <body>
     <header id="Home">
         <nav>
-            <div class="logo">Bamboo Crafts</div>
+            <div class="logo" onclick="toggleLogo()">
+                    <img id="logo-img" src="./asset/image/abban bamboo haven logo.jpg" alt="Abban Bamboo Haven Logo">
+            </div>
+            
             <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
         <ul class="navbar" id="navbar">
                 <li class="nav-item"><a href="#Home">Home</a></li>
                 <li class="nav-item"><a href="#About" >About</a></li>
+                <li class="nav-item"><a href="#Product">Products</a></li>
                 <li class="nav-item"><a href="#Service">Services</a></li>
-                <!-- <li class="nav-item"><a href="#Product">Products</a></li> -->
                 <li class="nav-item"><a href="#Contact">Contact</a></li>
             </ul>
         </nav>
+
+        <div id="logo-overlay" class="hidden" onclick="toggleLogo()"> <span class="close-btn" onclick="toggleLogo()">&times;</span>
+            <img id="enlarged-logo" src="./asset/image/abban bamboo haven logo.jpg" alt="Enlarged Logo">
+        </div>
+
         <div class="overlay">
             <div class="socials">
-               <i class="fab fa-facebook"> <a href="#"></a></i>
-                <i class="fab fa-twitter"><a href="#"></a></i>
-                <i class="fab fa-instagram"><a href="#"></a></i>
-                <i class="fas fa-envelope"><a href="#"></a></i>
+               <i class="fab fa-facebook"> <a href="#" target="_blank"></a></i>
+                <!-- <i class="fab fa-twitter"><a href="#"></a></i> -->
+                <i class="fab fa-instagram"><a href="https://www.instagram.com/abban_bamboohaven/?hl=en" target="_blank"></a></i>
+                <i class="fab fa-tiktok"><a href="https://www.tiktok.com/@abbanbamboohaven?is_from_webapp=1&sender_device=pc" target="_blank"></a></i>
+               
             </div>
 
             <div class="delivery">
@@ -34,7 +43,8 @@
             </div>
 
             <div class="contact">
-                <i class="fas fa-phone"><a href="#">+123456789</a></i>
+                <i class="fas fa-envelope"><a href="mailto:gideonabban36@gmail.com" target="_blank">gideonabban36@gmail.com</a></i>
+                <i class="fas fa-phone"><a href="tel:0557535736" target="_blank">0557535736</a></i>
                 <i class="fas fa-map-marker-alt"><a href="#">Abura-Asebu-Kwamankese Central Region-Ghana</a></i>
             </div>
 
@@ -52,7 +62,7 @@
             <button id="next" onclick="next()">&gt;</button>
     
             <div class="hero-content">
-            <h1>Welcome to Gideon Bamboo Crafts</h1>
+            <h1>Welcome to Abban Bamboo Haven</h1>
             <p>Enhance your home with our eco-friendly, sustainable bamboo products designed for a greener lifestyle.</p>
             <button><a href="http://" target="_blank">Shop now</a></button>
         </div>
@@ -104,10 +114,9 @@
 
     </section>
 
-    <!-- Services Section -->
-     <section class="service" id="Service">
-
-        <div class="products">
+   
+        <!-- product section -->
+        <section class="products">
             <h1>Products</h1>
             <p>Best Quality Bamboo Products</p>
         
@@ -128,16 +137,10 @@
                 <img src="./asset/image/b20.avif" alt="Bamboo Product">
                 <img src="./asset/image/b23.jpg" alt="Bamboo Product">
             </div>
+        </section>
         
-            <!-- <div class="products-content">
-                <button class="shop-btn">
-                    <a href="#" target="_blank">Shop Now</a>
-                </button>
-                <button class="like-btn">🤍</button>
-            </div> -->
-        </div>
-        
-
+     <!-- Services Section -->
+     <section class="service" id="Service">
         <div class="content">
 
             <div class="image">
@@ -147,7 +150,7 @@
             <div class="text">
                 <h1>Our Services</h1>
                 <p class="quote">
-                    At Bamboo Crafts, we specialize in sustainable, eco-friendly bamboo products. As a strong, flexible, and renewable resource, bamboo grows quickly with minimal environmental impact. Our responsibly sourced bamboo ensures durability and sustainability, offering a greener alternative for everyday use.  
+                    At Abban Bamboo Haven, we specialize in sustainable, eco-friendly bamboo products. As a strong, flexible, and renewable resource, bamboo grows quickly with minimal environmental impact. Our responsibly sourced bamboo ensures durability and sustainability, offering a greener alternative for everyday use.  
                 </p>
             </div>
 
@@ -203,9 +206,10 @@
         <div class="footer-content">
             <div class="socials">
                 <p>Follow us on social media:</p>
-               <i class="fab fa-facebook"> <a href="#"></a></i>
-                <i class="fab fa-twitter"><a href="#"></a></i>
-                <i class="fab fa-instagram"><a href="#"></a></i>
+               <i class="fab fa-facebook"> <a href="#" target="_blank"></a></i>
+                <!-- <i class="fab fa-twitter"><a href="#"></a></i> -->
+                <i class="fab fa-instagram"><a href="https://www.instagram.com/abban_bamboohaven/?hl=en" target="_blank"></a></i>
+                <i class="fab fa-tiktok" ><a href="https://www.tiktok.com/@abbanbamboohaven?is_from_webapp=1&sender_device=pc" target="_blank"></a></i>
             </div>
 
             <div class="delivery">
@@ -215,8 +219,8 @@
 
             <div class="footer-contact">
                 <i class="fas fa-map-marker-alt"><a href="#">Abura-Asebu-Kwamankese Central Region-Ghana</a></i>
-                <i class="fas fa-phone"><a href="#">+123456789</a></i>
-                <i class="fas fa-envelope"><a href="#"></a></i>
+                <i class="fas fa-phone"><a href="tel:0557535736" target="_blank">0557535736</a></i>
+                <i class="fas fa-envelope"><a href="mailto:gideonabban36@gmail.com" target="_blank">gideonabban36@gmail.com</a></i>
                 
             </div>
         </div>
