@@ -34,7 +34,6 @@
                 <a href="https://www.facebook.com/share/1XYW7kjF6A/" target="_blank">
                     <i class="fab fa-facebook"></i>
                 </a>
-                <!-- <a href="#"><i class="fab fa-twitter"></i></a> -->
                 <a href="https://www.instagram.com/abban_bamboohaven/?hl=en" target="_blank">
                     <i class="fab fa-instagram"></i>
                 </a>
@@ -55,25 +54,25 @@
 
         </div>
         
-        <div class="hero">
-            <div class="hero-image">
-                <img src="./asset/image/b11.jpg" id="container1" class="active">
-                <img src="./asset/image/b19.jpg" id="container2">
-                <img src="./asset/image/b3.jpg" id="container3">   
-                <img src="./asset/image/b2.jpg" id="container4"> 
-            </div>
-    
-            <button id="prev" onclick="prev()">&lt;</button>
-            <button id="next" onclick="next()">&gt;</button>
-    
-            <div class="hero-content">
+
+    <div class="hero">
+        <div class="hero-image">
+            <div class="nav-box left" onclick="prev()"></div>
+            <img src="./asset/image/m30.jpg" class="active">
+            <img src="./asset/image/m26.jpg">
+            <img src="./asset/image/m19.jpg">
+            <img src="./asset/image/m6.jpg">
+            <div class="nav-box right" onclick="next()"></div>
+        </div>
+        <div class="dots"></div>
+        <div class="hero-content">
             <h1>Welcome to</h1>
             <h2>Abban Bamboo Haven</h2>
             <p>Enhance your home with our eco-friendly, sustainable bamboo products designed for a greener lifestyle.</p>
-            <button><a href="http://" target="_blank">Shop now</a></button>
+            <button><a href="https://paystack.shop/abban-bamboo-haven" target="_blank">Shop now</a></button>
         </div>
     </div>
-
+    
     </header>
 
     <section id="About" class="about">
@@ -87,7 +86,7 @@
 
             <div class="text">
                     <p class="quote">
-                        Abban Bamboo Haven is a sustainability-driven brand dedicated to reducing reliance on non-renewable materials by creating eco-friendly household items. Based in Abura-Asebu-Kwamankese in the Central Region, we craft durable and aesthetically appealing bamboo products infused with vibrant African symbols. By blending cultural heritage with sustainable practices, we aim to promote an eco-conscious lifestyle while celebrating African artistry.
+                        Bamboo is a natural material that is used in many different products. It is a renewable resource that is easy to find and can be grown in many different places. Bamboo is also a strong and flexible material that is used in many different products. It is a renewable resource that is easy to find and can be grown in many different places.
                     </p>
                 </p>
             </div>
@@ -106,9 +105,9 @@
             </div>
             <div class="statement-item">
                 <h3>Values</h3>
-                <p>
-                    Bamboo is a natural material that is used in many different products. It is a renewable resource that is easy to find and can be grown in many different places. Bamboo is also a strong and flexible material that is used in many different products. It is a renewable resource that is easy to find and can be grown in many different places.
-                </p>
+               <p>Abban Bamboo Haven is a sustainability-driven brand dedicated to reducing reliance on non-renewable materials by creating eco-friendly household items. Based in Abura-Asebu-Kwamankese in the Central Region, we craft durable and aesthetically appealing bamboo products infused with vibrant African symbols. By blending cultural heritage with sustainable practices, we aim to promote an eco-conscious lifestyle while celebrating African artistry.
+            </p>
+                
             </div>
         
         </div>
@@ -118,21 +117,40 @@
                 <h1>Collection</h1>
                 <p>Discover our range of eco-friendly products that are made from bamboo.</p>
                 
-            <div class="collection-image">
-               <div class="collection-item"><img src="./asset/image/b1.jpg" alt="image"><a href="">Collection 1</a></div>
-               <div class="collection-item"><img src="./asset/image/b2.jpg" alt="image"><a href="">Collection 2</a></div>
-               <div class="collection-item"><img src="./asset/image/b3.jpg" alt="image"><a href="">Collection 3</a></div>
-               <div class="collection-item"><img src="./asset/image/b4.jpg" alt="image"><a href="">Collection 4</a></div>  
-            </div>
-        </div>
+                <div class="carousel-container">
+                    <button class="prev" onclick="prevSlide()">&#10094;</button>
+                    <div class="carousel" id="carousel">
+                         <div class="collection-image">
+                            <div class="collection-item"><img src="./asset/image/spoons.png" alt="image"></div>
+                            <div class="collection-item"><img src="./asset/image/tray7.webp" alt="image"></div>
+                            <div class="collection-item"><img src="./asset/image/cup9.webp" alt="image"></div>
+                            <div class="collection-item"><img src="./asset/image/b3.jpg" alt="image"></div>  
+                            <div class="collection-item"><img src="./asset/image/spoons.png" alt="image"></div>
+                            <div class="collection-item"><img src="./asset/image/tray7.webp" alt="image"></div>
+                            <div class="collection-item"><img src="./asset/image/cup9.webp" alt="image"></div>
+                            <div class="collection-item"><img src="./asset/image/b3.jpg" alt="image"></div>  
+                            <div class="collection-item"><img src="./asset/image/spoons.png" alt="image"></div>
+                            <div class="collection-item"><img src="./asset/image/tray7.webp" alt="image"></div>
+                            <div class="collection-item"><img src="./asset/image/cup9.webp" alt="image"></div>
+                            <div class="collection-item"><img src="./asset/image/b3.jpg" alt="image"></div>  
+                        </div>
+                    </div>
+                    
+                    <button class="next" onclick="nextSlide()">&#10095;</button>
+                </div>
 
+                
         <div class="content">
 
             <div class="text">
-                <h1>Meet the Founder</h1>
-                <p class="quote">
+                <h1>Meet the Innovator</h1>
+                <!-- <p class="quote">
                     Gideon  Abban, an innovative entrepreneur from Abura-Asebu-Kwamankese, is dedicated to sustainability through eco-friendly craftsmanship. Using bamboo, he creates durable and stylish household items, blending traditional techniques with modern design. With a vision for growth, he seeks mentorship and support to expand his impact and promote sustainable living.
-                </p>
+                </p> -->
+
+                <p>Gideon Abban, a young and visionary entrepreneur from Abura-Asebu-Kwamankese, is redefining sustainable craftsmanship through innovation. With a deep passion for eco-friendly solutions, he transforms bamboo into durable, stylish, and functional household items, seamlessly blending traditional artistry with modern design. His work not only preserves cultural heritage but also promotes environmental sustainability.
+
+                    Driven by a mission to make a lasting impact, Gideon seeks mentorship, partnerships, and resources to scale his business and inspire other young creatives. He envisions a future where locally sourced materials are embraced for sustainable living, fostering economic empowerment and environmental consciousness within his community and beyond.</p>
             </div>
 
             <div class="image">
@@ -143,31 +161,76 @@
 
     </section>
 
-   
-        <!-- product section -->
-        <section class="products" id="Product">
-            <h1>Products</h1>
-            <p>Best Quality Bamboo Products</p>
-        
-            <div class="products-image">
-                <img src="./asset/image/b23.jpg" alt="Bamboo Product">
-                <img src="./asset/image/b1.jpg" alt="Bamboo Product">
-                <img src="./asset/image/b11.jpg" alt="Bamboo Product">
-                <img src="./asset/image/b12.jpg" alt="Bamboo Product">
-                <img src="./asset/image/b23.jpeg" alt="Bamboo Product">
-                <img src="./asset/image/b21.jpeg" alt="Bamboo Product">
-                <img src="./asset/image/b15.jpg" alt="Bamboo Product">
-                <img src="./asset/image/b8.webp" alt="Bamboo Product">
-                <img src="./asset/image/b9.jpg" alt="Bamboo Product">
-                <img src="./asset/image/b13.jpeg" alt="Bamboo Product">
-                <img src="./asset/image/b19.jpg" alt="Bamboo Product">
-                <img src="./asset/image/b13.jpeg" alt="Bamboo Product">
-                <img src="./asset/image/b17.webp" alt="Bamboo Product">
-                <img src="./asset/image/b20.avif" alt="Bamboo Product">
-                <img src="./asset/image/b23.jpg" alt="Bamboo Product">
+    <!-- Product Section -->
+    <section class="products" id="Product">
+        <h1>Products</h1>
+        <p>Best Quality Bamboo Products</p>
+
+        <div class="products-image">
+
+            <!-- Product 1 -->
+            <div class="product-wrapper">
+                <img src="./asset/image/spoons1.avif" alt="Handcrafted Bamboo Spoon">
+                <p class="price-label">Price: GHC 10</p>
+                <div class="button-container">
+                    <a href="https://paystack.com/buy/spoons-hkxubx" class="buy-btn">Buy Now</a>
+                    <button class="like-btn">🤍</button>
+                </div>
             </div>
-        </section>
-        
+
+            <!-- Product 2 -->
+            <div class="product-wrapper">
+                <img src="./asset/image/spatular2.webp" alt="Bamboo Spatular">
+                <p class="price-label">Price: GHC 20</p>
+                <div class="button-container">
+                    <a href="https://paystack.com/buy/spatular-uyznvd" class="buy-btn">Buy Now</a>
+                    <button class="like-btn">🤍</button>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-wrapper">
+                <img src="./asset/image/cup7.jpg" alt="Bamboo Cup">
+                <p class="price-label">Price: GHC 15</p>
+                <div class="button-container">
+                    <a href="https://paystack.com/buy/cup-abjjhz" class="buy-btn">Buy Now</a>
+                    <button class="like-btn">🤍</button>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product-wrapper">
+                <img src="./asset/image/cup.png" alt="Stylish Bamboo Cup">
+                <p class="price-label">Price: GHC 20</p>
+                <div class="button-container">
+                    <a href="https://paystack.com/buy/cup-oyxeum" class="buy-btn">Buy Now</a>
+                    <button class="like-btn">🤍</button>
+                </div>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="product-wrapper">
+                <img src="./asset/image/tray.webp" alt="Bamboo Tray">
+                <p class="price-label">Price: GHC 80</p>
+                <div class="button-container">
+                    <a href="https://paystack.com/buy/tray-ouaaaf" class="buy-btn">Buy Now</a>
+                    <button class="like-btn">🤍</button>
+                </div>
+            </div>
+
+            <!-- Product 6 -->
+            <div class="product-wrapper">
+                <img src="./asset/image/trays.png" alt="Bamboo Trays">
+                <p class="price-label">Price: GHC 100</p>
+                <div class="button-container">
+                    <a href="https://paystack.com/buy/tray-arkuxu" class="buy-btn">Buy Now</a>
+                    <button class="like-btn">🤍</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
      <!-- Services Section -->
      <section class="service" id="Service">
         <div class="content">
@@ -178,9 +241,14 @@
 
             <div class="text">
                 <h1>Our Services</h1>
-                <p class="quote">
+                <!-- <p class="quote">
                     At Abban Bamboo Haven, we specialize in sustainable, eco-friendly bamboo products. As a strong, flexible, and renewable resource, bamboo grows quickly with minimal environmental impact. Our responsibly sourced bamboo ensures durability and sustainability, offering a greener alternative for everyday use.  
-                </p>
+                </p> -->
+                <p class="quote">At Abban Bamboo Haven, we specialize in sustainable, eco-friendly bamboo products, including spoons, trays, cups, and spatulas. Bamboo is a strong, flexible, and renewable resource that grows quickly with minimal environmental impact, making it the perfect choice for conscious consumers.
+
+                    Our responsibly sourced bamboo ensures durability, longevity, and sustainability, offering a greener alternative to plastic and other non-biodegradable materials. Each product is thoughtfully designed to combine functionality, elegance, and eco-conscious living, making them ideal for everyday use in homes, cafés, and restaurants.
+                    
+                    Whether you're stirring, serving, or sipping, our bamboo essentials bring natural beauty, warmth, and sustainability to your kitchen and dining experience. Choose Abban Bamboo Haven for high-quality, earth-friendly products that make a difference—one bamboo item at a time. </p>
             </div>
 
         </div>
@@ -188,51 +256,106 @@
      </section>
 
     <!-- Contact Section -->
-    <section class="main-contact" id="Contact">
-        <h1>Contact Us</h1>
 
-        <div class="contact-container">
 
-        <div class="form">
-            
-            <form action="https://formspree.io/f/xqkwvqpw" method="POST">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required><br>
+<section class="blog-section">
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required><br>
+<div class="blog">
+ <div class="blog-text">
+    <h1>Why Choose Us</h1>
+    <p>Discover the reasons why Abban Bamboo Haven is your go-to destination for eco-friendly bamboo products.</p>
+    <button>Read More</button>
+    <button>Shop Now</button>
+</div>
 
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea><br>
+<div class="blog-image">
+   <div class="image1"> <img src="./asset/image/m33.jpg" alt="blog"></div>
+    <div class="image2"><img src="./asset/image/m41.jpg" alt="blog"></div>
+</div>
 
-                <input type="submit" value="Submit">
-            </form>
+</div>
+
+
+    <div class="blog-container">
+        <div class="statement-item">
+        <div class="blog-card">
+            <img src="./asset/image/icons/quality product.png" alt="blog">
+            <h3>Best Quality Bamboo Products</h3>
+            <p>Discover our top-quality bamboo products, carefully selected to meet your needs and exceed your expectations.</p>
         </div>
-   
-    <!-- Map Section -->
-<div class="map-section">
-    <h2>Find Us Here</h2>
-    <div class="map-container">
-        <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31717.661322060415!2d-1.3166933393317608!3d5.208096029676769!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfddf1aee7a639b7%3A0x2ff6481c54d0f3b3!2sAbura-Asebu-Kwamankese%20District!5e0!3m2!1sen!2sgh!4v1708367000000" 
-            width="100%" 
-            height="100" 
-            style="border:0;" 
-            allowfullscreen="" 
-            loading="lazy" 
-            referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
+        </div>
+        <div class="statement-item">
+        <div class="blog-card">
+            <img src="./asset/image/icons/quality assurance.png" alt="blog">
+            <h3>Quality Assurance</h3>
+            <p>At Abban Bamboo Haven, we prioritize quality assurance to ensure the highest standards of craftsmanship and sustainability.</p>
+        </div>
+        </div>
+        <div class="statement-item">
+        <div class="blog-card">
+            <img src="./asset/image/icons/customer service.png" alt="blog">
+            <h3>Customer Satisfaction</h3>
+            <p>Customer satisfaction is our top priority, and we work tirelessly to deliver products that meet your expectations and exceed your expectations.</p>
+        </div>
+</div>
+</div>
+
+<div class="review"> 
+    <h1>Review</h1>   
+    <p>We value your feedback and are committed to providing excellent customer service. Thank you for choosing Abban Bamboo Haven and we look forward to serving you in the future. If you have any questions or concerns, please don't hesitate to contact us.
+    </p>
+</div> 
+</section>
+
+<section class="main-contact" id="Contact">
+    <h1>Contact Us</h1>
+
+    <div class="contact-container">
+
+    <div class="form">
+        
+        <form action="https://formspree.io/f/mldgqgkj" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea><br>
+
+            <input type="submit" value="Submit">
+        </form>
     </div>
 
+<!-- Map Section -->
+<div class="map-section">
+<h2>Find Us Here</h2>
+<div class="map-container">
+    <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31717.661322060415!2d-1.3166933393317608!3d5.208096029676769!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfddf1aee7a639b7%3A0x2ff6481c54d0f3b3!2sAbura-Asebu-Kwamankese%20District!5e0!3m2!1sen!2sgh!4v1708367000000" 
+        width="100%" 
+        height="100" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+    </iframe> 
 </div>
 
 </section>
 
-
     <footer>
             
         <div class="footer-content">
-            <div class="socials">
+           <div class="footer-info">
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <i class="fas fa-map-marker-alt"><a href="https://maps.app.goo.gl/V5NamTsbECGhQ7Tz7" target="_blank">Abura-Asebu-Kwamankese, Central Region-Ghana</a></i>
+                    <i class="fas fa-phone"><a href="tel:0557535736" target="_blank">0557535736</a></i>
+                    <i class="fas fa-envelope"><a href="mailto:gideonabban36@gmail.com" target="_blank">gideonabban36@gmail.com</a></i>  
+                </div>
+                <div class="socials">
                 <p>Follow us on social media:</p>
                     <a href="https://www.facebook.com/share/1XYW7kjF6A/" target="_blank">
                         <i class="fab fa-facebook"></i>
@@ -246,17 +369,31 @@
                     </a>
                 
             </div>
+        </div>
 
-            <div class="delivery">
-                <button><a href="http://" target="_blank">Shop now</a></button>
-                <p>Delivery available nationwide</p>
+            <div class="support">
+                <h3>Support</h3>
+                <ul>
+                    <li>Contact Us</li>
+                    <li>FAQs</li>
+                    <li>Terms and Conditions</li>
+                    <li>Privacy Policy</li>
+                </ul>
             </div>
 
-            <div class="footer-contact">
-                <i class="fas fa-map-marker-alt"><a href="https://maps.app.goo.gl/V5NamTsbECGhQ7Tz7" target="_blank">Abura-Asebu-Kwamankese, Central Region-Ghana</a></i>
-                <i class="fas fa-phone"><a href="tel:0557535736" target="_blank">0557535736</a></i>
-                <i class="fas fa-envelope"><a href="mailto:gideonabban36@gmail.com" target="_blank">gideonabban36@gmail.com</a></i>
-                
+            <div class="legal">
+                <h3>Legal</h3>
+                <ul>
+                    <li>Terms of Use</li>
+                    <li>Privacy Policy</li>
+                    <li>Cookie Policy</li>
+                </ul>
+
+            </div>
+
+            <div class="delivery">
+                <button><a href="https://www.instagram.com/abban_bamboohaven/?hl=en" target="_blank">Shop now</a></button>
+                <p>Delivery available nationwide</p>
             </div>
         </div>
 
