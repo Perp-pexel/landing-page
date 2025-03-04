@@ -1345,7 +1345,7 @@ h5 {
         width: 90%;
         text-align: center;
         display: block;
-        padding-right: 20px;
+        padding: 20px;
     }
     .statement-item {
         margin-bottom: 10px;
