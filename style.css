@@ -1346,11 +1346,18 @@ h5 {
         text-align: center;
         display: block;
         padding: 20px;
+        
     }
     .statement-item {
         margin-bottom: 10px;
         border: none;
     }
+
+    .statement-item h3 {
+        font-size: 20px;
+        margin: 0;
+    }
+    
 
     .collection {
         flex-direction: column;
