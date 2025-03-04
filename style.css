@@ -549,36 +549,31 @@ p{
     margin-bottom: 10px;
 }
 
-.collection-image{
-   display: flex;
-   flex-direction: row;
-   gap: 10px;
-   margin-left: 10%;
-   margin-right: 10%;
-}
-
 .carousel-container {
     width: 100%;
+    max-width: 1000px; /* Increased width */
     margin: auto;
     overflow: hidden;
     position: relative;
-    max-width: 1000px;
-    margin-top: 5%;
-    margin-bottom: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.carousel-wrapper {
+    width: 100%;
+    overflow: hidden;
 }
 .carousel {
     display: flex;
-    transition: transform 1s ease-in-out;
-    width: calc(100% * 2); /* Adjusted dynamically based on visible items */
+    gap: 20px; /* Increased gap */
+    transition: transform 0.5s ease-in-out;
 }
 .collection-item {
-    width: 50%;
-    flex: 0 0 50%; /* Two images visible at a time */
-    text-align: center;
+    flex: 0 0 calc(50% - 10px); /* Ensuring exactly two images are visible */
 }
 .collection-item img {
-    width: 100%; /* Equal width */
-    height: 300px; /* Equal height */
+    width: 80%;
+    height: 250px; /* Increased height */
     object-fit: cover;
     border-radius: 10px;
 }
@@ -589,17 +584,19 @@ p{
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
-    padding: 20px;
+    padding: 15px 20px;
     cursor: pointer;
     border-radius: 50%;
     z-index: 10;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    opacity: 0; /* Hide buttons initially */
+    transition: opacity 0.3s ease-in-out;
 }
 .prev { left: 10px; }
-.next { right: 10px; }
-
+.next { right: 110px; }
+.carousel-container:hover .prev,
+.carousel-container:hover .next {
+    opacity: 1; /* Show buttons when hovering */
+}
 /* Products Section */
 .products {
     text-align: center;
@@ -630,8 +627,8 @@ p{
     width: 100%;
     max-width: 300px;
     overflow: hidden;
-    background: transparent;
-    padding: 5px;
+    /* background: transparent; */
+    /* padding: 5px; */
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(12, 14, 12, 0.829);
     transition: transform 0.3s ease-in-out;
@@ -653,17 +650,19 @@ p{
 
 
 /* Price Label - Aligned to the left */
-.price-label {
+/* .price-label {
     font-size: 1.2rem;
     font-weight: bold;
     color: green;
     padding: 10px 0;
     margin-left: 5px;
     text-align: left;
-}
+} */
 
 /* Button container - Initially hidden */
 .button-container {
+    position: absolute;
+    bottom: 10px;
     display: flex;
     gap: 5px;
     margin-left: 10px;
@@ -779,6 +778,78 @@ p{
     margin-right: 10px;
 }
 
+#brief {
+    display: none;
+}
+
+    /* Overlay background */
+    .read {
+        display: none; /* Hidden by default */
+        position: fixed; /* Sit on top of the page content */
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+        z-index: 1000; /* Ensure it sits above other content */
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+    }
+
+    /* Overlay background */
+    .read {
+        display: none; /* Hidden by default */
+        position: fixed; /* Sit on top of the page content */
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+        z-index: 1000; /* Ensure it sits above other content */
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+    }
+
+    /* Overlay content (card) */
+    .read-content {
+        position: relative; /* Establishes a positioning context for the close button */
+        background-color: #fff;
+        padding: 40px;
+        border-radius: 10px;
+        max-width: 600px;
+        width: 90%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        text-align: center;
+    }
+
+    .read-content img {
+        width: 45%;
+        height: 23vh;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    /* Close button */
+    .closeBtn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        border: none;
+        font-size: 24px;
+        font-weight: bold;
+        cursor: pointer;
+        background-color: transparent;
+        padding: 5px 5px;
+        border-radius: 5px;
+
+    }
+
+    .closeBtn:hover {
+        color: green; /* Change color on hover */
+        border: 2px solid green;
+        border-radius: 5px;
+        border-color: black;
+    }
 
 .blog-image{
     width: 45%;
@@ -918,7 +989,6 @@ p{
     transition: transform 0.3s ease-in-out;
 
 }
-
 /* Contact */
 .main-contact {
     align-items: center;
@@ -1063,7 +1133,7 @@ a {
 
 .footer-contact i {
     margin-right: 10px;
-    margin-left: 30px;
+    /* margin-left: 30px; */
     font: 5px;
 } 
 
@@ -1077,8 +1147,8 @@ a {
 }
 
 .footer-info .socials {
-    margin-left: -100px;
-    margin-top: 20px;
+    margin-left: -130px;
+    margin-top: 30px;
     margin-bottom: 10px;
     font-size: 30px;
 }

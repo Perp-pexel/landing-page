@@ -132,66 +132,45 @@ setInterval(() => {
 }, 6000);
 
 showSlide(currentIndex);
-// document.addEventListener("DOMContentLoaded", function () {
-//     const images = document.querySelectorAll(".products-image img");
 
-//     images.forEach((img, index) => {
-//         // Create wrapper div for the image
-//         let wrapper = document.createElement("div");
-//         wrapper.classList.add("product-wrapper");
+// collection sliderconst carousel = document.getElementById('carousel');
+        const sliders = document.querySelectorAll('.collection-item');
+       const totalSlides = Math.ceil(sliders.length); // Ensure all images are included
+        let index = 0;
+        let autoSlide = setInterval(nextSlide, 3000);
 
-//         // Create button container
-//         let buttonContainer = document.createElement("div");
-//         buttonContainer.classList.add("button-container");
+        function updateSlide() {
+            const offset = index * (carousel.clientWidth / 2 + 10); // Adjusted for increased gap
+            carousel.style.transform = `translateX(-${offset}px)`;
+        }
 
-//         // Buy Now button
-//         let buyButton = document.createElement("button");
-//         buyButton.classList.add("buy-btn");
-//         buyButton.innerText = "Buy Now";
+        function nextSlide() {
+            clearInterval(autoSlide);
+            if (index < totalSlides - 1) {
+                index++;
+            } else {
+                index = 0;
+            }
+            updateSlide();
+            autoSlide = setInterval(nextSlide, 3000);
+        }
 
-//         // Like button
-//         let likeButton = document.createElement("button");
-//         likeButton.classList.add("like-btn");
-//         likeButton.innerHTML = "🤍"; // Default empty heart
+        function prevSlide() {
+            clearInterval(autoSlide);
+            if (index > 0) {
+                index--;
+            } else {
+                index = totalSlides - 1;
+            }
+            updateSlide();
+            autoSlide = setInterval(nextSlide, 3000);
+        }
 
-//         likeButton.addEventListener("click", function () {
-//             likeButton.innerHTML = likeButton.innerHTML === "🤍" ? "❤️" : "🤍";
-//         });
+        document.querySelector('.prev').addEventListener('click', prevSlide);
+        document.querySelector('.next').addEventListener('click', nextSlide);
 
-//         // Append buttons to container
-//         buttonContainer.appendChild(buyButton);
-//         buttonContainer.appendChild(likeButton);
-
-//         // Wrap the image inside the wrapper and append buttons
-//         img.parentNode.insertBefore(wrapper, img);
-//         wrapper.appendChild(img);
-//         wrapper.appendChild(buttonContainer);
-//     });
-// });
-
-// collection slider
-const carousel = document.getElementById('carousel');
-let index = 0;
-const totalSlides = Math.ceil(document.querySelectorAll('.collection-item').length / 2); // Two images per slide
-let autoSlide = setInterval(nextSlide, 3000); // Auto slide every 3 seconds
-
-function updateSlide() {
-    carousel.style.transform = `translateX(-${index * 100}%)`;
-}
-
-function nextSlide() {
-    clearInterval(autoSlide);
-    index = (index + 1) % totalSlides;
-    updateSlide();
-    autoSlide = setInterval(nextSlide, 3000);
-}
-
-function prevSlide() {
-    clearInterval(autoSlide);
-    index = (index - 1 + totalSlides) % totalSlides;
-    updateSlide();
-    autoSlide = setInterval(nextSlide, 3000);
-}
+        document.querySelector('.carousel-container').addEventListener('mouseenter', () => clearInterval(autoSlide));
+        document.querySelector('.carousel-container').addEventListener('mouseleave', () => autoSlide = setInterval(nextSlide, 3000));
 
 // likeButton
 document.addEventListener("DOMContentLoaded", function () {
@@ -221,4 +200,24 @@ window.addEventListener("scroll", function () {
     }
 
     lastScrollTop = currentScroll;
+});
+
+// readmore
+// Function to toggle the overlay
+function toggleOverlay() {
+    const overlay = document.getElementById('readOverlay');
+    overlay.style.display = (overlay.style.display === 'flex') ? 'none' : 'flex';
+}
+
+// Attach event listeners to buttons
+document.getElementById('readMoreBtn').addEventListener('click', toggleOverlay);
+document.getElementById('closeBtn').addEventListener('click', toggleOverlay);
+
+// Close the overlay when clicking outside the content
+window.addEventListener('click', function(event) {
+    const overlay = document.getElementById('readOverlay');
+    const overlayContent = document.querySelector('.read-content');
+    if (event.target === overlay && !overlayContent.contains(event.target)) {
+        overlay.style.display = 'none';
+    }
 });
