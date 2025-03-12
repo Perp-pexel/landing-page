@@ -171,7 +171,7 @@ i:hover {
 }
 
 .contact {
-    width: 580px; 
+    width: 520px; 
 }
 
 .contact i {
@@ -1319,6 +1319,10 @@ h5 {
 
     .hero-image{
         object-fit: cover;
+    }
+
+    .hero-content{
+        width: 100%;
     }
 
     .hero-content h1 {
