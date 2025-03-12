@@ -154,7 +154,7 @@ i:hover {
 }
 
 .socials {
-    margin-left: 10px; 
+    margin-left: 30px; 
 }  
 
 .socials a {
@@ -166,17 +166,16 @@ i:hover {
 }
 
 .delivery {
+    margin-left: 10px;
     margin-right: 10px; 
 }
 
 .contact {
-    width: 600px; 
-    padding-left: 10px;
+    width: 580px; 
 }
 
 .contact i {
-    margin-right: 10px;
-    margin-left: 30px;
+    margin-left: 10px;
 } 
 
 .contact a {
@@ -185,7 +184,6 @@ i:hover {
     transition: 0.3s ease-in-out;
     font-size: 10px;
     font-weight: bold;
-    margin-left: 5px;
 }
 
 .contact a:hover {
@@ -424,13 +422,13 @@ i:hover {
 /* About */
 
 .about{
+    margin-top: 1%;
     padding: 30px;
 }  
 
  h1 {
     text-align: center;
-    margin-bottom: 0;
-    font-size: 30px;
+    font-size: 35px;
 }
 
 .content{
@@ -444,6 +442,7 @@ i:hover {
     margin: 20px;
     margin-left: 5%;
     margin-right: 5%;
+    margin-top: 5%;
     animation: slideUp 1.5s ease-out forwards;
     animation-delay: 0.3s;
 }
@@ -497,7 +496,8 @@ i:hover {
     flex-direction: row;
     font-size: 15px;
     line-height: 1.5;
-    gap: 10px;  
+    gap: 10px; 
+    margin: 15px; 
     margin-left: 10%;
     margin-right: 10%;
     padding: 20px;
@@ -529,6 +529,7 @@ i:hover {
     line-height: 1.5;
     margin-left: 10%;
     margin-right: 10%;
+    margin-bottom: 10%;
     margin: 15px;
     animation: scaleUp 1.5s ease-out forwards;
     animation-delay: 0.5s;
@@ -536,16 +537,25 @@ i:hover {
 }
 
 .collection{
+    text-align: center;
     margin: 20px;
     animation: slideLeft 1.5s ease-out forwards;
     animation-delay: 0.1s; 
+}
+
+.collection-text{
+    text-align: center;
+    margin: 50px;
+    margin-bottom: 5%;
+    /* animation: slideLeft 1.5s ease-out forwards;
+    animation-delay: 0.1s;  */
 }
 
 p{
     text-align: center;
     font-size: 15px;
     margin: 5px;
-    margin-top: 5px;
+    margin-top: 10px;
     margin-bottom: 10px;
 }
 
@@ -591,8 +601,8 @@ p{
     opacity: 0; /* Hide buttons initially */
     transition: opacity 0.3s ease-in-out;
 }
-.prev { left: 10px; }
-.next { right: 110px; }
+.prev { left: 50px; }
+.next { right: 50px; }
 .carousel-container:hover .prev,
 .carousel-container:hover .next {
     opacity: 1; /* Show buttons when hovering */
@@ -614,7 +624,7 @@ p{
     gap: 20px;
     object-fit: cover;
     justify-content: center;
-    margin-top: 2%;
+    margin-top: 4%;
 }
 
 /* Wrapper to hold image + buttons */
