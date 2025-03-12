@@ -376,7 +376,7 @@ i:hover {
 }
 
  .hero-content button:hover {
-    background: transparent;
+    background: rgba(0, 128, 0, 0.589);
     color: white;
     border: 2px solid green;
     border-radius: 5px;
@@ -1191,8 +1191,9 @@ a {
     text-align: start;}
 
 .support {
-    margin-top: 10px;
-    margin-left: 70px;
+    /* margin-top: 10px; */
+    margin-left: 50px;
+    font: 50px;
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -1200,11 +1201,13 @@ a {
 }
 
 .legal {
-    margin-top: 10px;
-    margin-left: 40px;
+    /* margin-top: 10px; */
+
+    margin-left: 50px;
+    font: 50px;
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 10px;
     text-align: start;
 }
 
