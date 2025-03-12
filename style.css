@@ -1515,11 +1515,13 @@ h5 {
         font-size: 5px;
     }
 
-
-
-    .footer-contact i{
+    .footer-contact{
         text-align: center;
     }
+
+    /* .footer-contact i{
+        text-align: center;
+    } */
 
     .footer-info .socials {
         width: 100%;
